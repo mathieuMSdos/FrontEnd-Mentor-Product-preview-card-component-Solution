@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  /* font family */
+  --font-title: "Fraunces", serif;
+  --font-main-text: "Montserrat", sans-serif;
+
+  /* font size desktop */
+  --cardTitleFontSize: 1.8em;
+  --cardTextSize: 0.8em;
+  --cardButtonTextSize: 0.7em;
+
+  /* color theme */
+  --main-color-title: hsl(212, 21%, 14%);
+  --main-color-text: hsl(228, 12%, 48%);
+  --price-color: hsl(158, 36%, 37%);
+  --button-color: hsl(158, 36%, 37%);
+  --button-color-hover: hsl(159, 37%, 20%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: 550px;
+}
+
+.imgContainer {
+  height: 100%;
+  width: 50%;
+}
+
+.imgContainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.description {
+  height: 100%;
+  width: 50%;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0px 10px 10px 0px;
+}
+.category {
+  font-family: var(--font-main-text);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--main-color-text);
+  font-size: 0.7em;
+}
+.description h1 {
+  font-family: var(--font-title);
+  color: var(--main-color-title);
+  font-size: var(--cardTitleFontSize);
+  line-height: 1em;
+}
+.description p {
+  font-family: var(--font-main-text);
+  color: var(--main-color-text);
+  font-size: var(--cardTextSize);
+  line-height: 1.5em;
+}
+.prices {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.priceProduct {
+  font-size: 1.7em;
+  font-family: var(--font-title);
+  color: var(--price-color);
+}
+.oldPriceProduct {
+  text-decoration: line-through;
+  font-family: var(--font-main-text);
+  color: var(--main-color-text);
+  font-size: var(--cardTextSize);
+  margin-right: 25px;
+}
+.AddToCartButton {
+  cursor: pointer;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button-color);
+  border-radius: 7px;
+}
+
+.AddToCartButton:hover {
+  background-color: var(--button-color-hover);
+}
+
+.AddToCartButton img {
+  margin-right: 10px;
+}
+
+.AddToCartButton p {
+  font-family: var(--font-main-text);
+  font-weight: 700;
+  color: #ffff;
+  font-size: var(--cardButtonTextSize);
+}
+
+.card > * {
+  transition: 0.4s ease;
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    flex-direction: column;
+    height: 90vh;
+    width: 90vw;
+  }
+
+  .imgContainer {
+    height: 40%;
+    width: 100%;
+  }
+
+  .imgContainer img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .description {
+    height: 100%;
+    width: 100%;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 0px 0px 10px 10px;
+  }
+}
